@@ -7,6 +7,42 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root"></div>
+
+  <script>
+    // const = constant , 항수 : 변하지 않을 거야
+
+    // 정적 객체 작성
+    // 객체 안에 함수가 들어 있는 걸 method라고 한다.
+    
+    const itsMe = {
+      name : "leejaekwon",
+      age : 27,
+      home : "oracle",
+      room : "305호",
+      senatnace : "저는" + this.name + "입니다.",
+      test : `저는 ${this.name}입니다`,
+      
+      adult : function() {
+        if(itsMe.age >= 20) {
+          console.log("나는 성인이야");
+        }else {
+          console.log("나는 성인이 아니야");
+        }
+      }
+    };
+    itsMe.adult();
+
+    // 동적으로 객체 작성
+    itsMe.myName = function() {
+      console.log("저는" + this.name + "입니다.")
+    };
+    itsMe.myName();
+
+    // 동적 객체 작성
+    // key를 매번 정하고 할 수 없기 때문에 유연하게 할당 가능하다.
+    
+    
+  </script>
 </body>
 </html>

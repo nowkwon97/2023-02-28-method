@@ -8,7 +8,8 @@
 </head>
 <body>
   <div id="root"></div>
-
+  <!-- console도 객체였다. -->
+  <!-- console에서 log, dir ,table 등등 다양한 함수가 있던 것이었다. -->
   <script>
     // const = constant , 항수 : 변하지 않을 거야
 
@@ -22,27 +23,21 @@
       room : "305호",
       senatnace : "저는" + this.name + "입니다.",
       test : `저는 ${this.name}입니다`,
-      
       adult : function() {
         if(itsMe.age >= 20) {
           console.log("나는 성인이야");
         }else {
           console.log("나는 성인이 아니야");
         }
+      },
+      nickname : function() {
+        this.name = "이미남"
       }
     };
     itsMe.adult();
-
-    // 동적으로 객체 작성
-    itsMe.myName = function() {
-      console.log("저는" + this.name + "입니다.")
-    };
-    itsMe.myName();
-
-    // 동적 객체 작성
-    // key를 매번 정하고 할 수 없기 때문에 유연하게 할당 가능하다.
-    
-    
+    console.table(itsMe);
+    itsMe.nickname();
+    console.table(itsMe);
   </script>
 </body>
 </html>

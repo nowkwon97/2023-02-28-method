@@ -10,14 +10,27 @@
   <div id="root"></div>
 
   <script>
-    let root = document.getElementById('root');
+    
 
     const AboutMe = {
       myName : "leejaekwon",
       age : 27,
       gender : "male",
-      githubAddress 
+      githubAddress : "https://github.com/nowkwon97",
+      address : {
+        city : "Daejeon",
+        state : "Seogu",
+        dong : "Naedong",
+        postNumber : 1234,
+        hostName : "leejaekwon"
+      },
+      totalAddress : function() {
+        return `${this.city}시 ${this.state}구 ${this.dong}동, 우편번호 : ${this.postNumber}`;
+      }
     }
+    console.log(AboutMe);
+    AboutMe.totalAddress;
+    console.table(AboutMe);
   </script>
 </body>
 </html>

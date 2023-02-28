@@ -21,7 +21,7 @@ function makeDivTwoStructure(a, b) {
     divTwo : document.createElement(b)
   };
   return divTwoTree;
-}
+};
 
 let styleMainForm = makeMainStructure('div', 'div', 'div');
 let div1 = styleMainForm.divOne;

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #menu {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+
+    const ElementMaker = {
+      tagName : "",
+      setAttributeName : "",
+      setAttributeValue : "",
+      parent : "",
+
+      maker : function() {
+        const element = document.createElement(this.tagName);
+        element.setAttribute(this.setAttributeName, this.setAttributeValue);
+        this.parent.appendChild(element);
+      },
+      loopFunc : function() {
+        for(let i = 0; i < 100; i++){
+          this.maker();
+        }
+      }
+    };
+    console.dir(ElementMaker);
+    // 
+    // 
+    function ulMaker(tagName, setAttributeName, setAttributeValue, parent) {
+      const element = document.createElement(tagName);
+      // 속성을 만들어주는 setAttribute
+      element.setAttribute(setAttributeName, setAttributeValue);
+      parent.appendChild(element);
+    }
+    for(let i = 0; i < 100; i++) {
+      ulMaker('header', 'id', `test-${i}`, root);
+    };
+    console.dir(root);
+    root.children[65].style.width = "100px";
+    root.children[65].style.height = "100px";
+    root.children[65].style.backgroundColor = "red";
+
+  </script>
+</body>
+</html>

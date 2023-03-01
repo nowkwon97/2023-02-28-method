@@ -10,4 +10,33 @@ function makeTag(tagName, setAttributeName, setAttributeValue, parent) {
 function makeStructure(container, tagName) {
   const newTag = document.createElement(tagName);
   container.appendChild(newTag);
+};
+
+// tag의 width, height 조정해주는 함수
+function tagWidthHeightStyle(tagName, width, height) {
+  tagName.style.width = width;
+  tagName.style.height = height;
+};
+
+// tag의 display 설정 함수
+// 사용하지 않을 매게변수는 ''로 공백을 준다.
+function tagDisplayStyle(tagName, display, flexDirection, justifyContent, alignItems) {
+  tagName.style.display = display;
+  tagName.style.flexDirection = flexDirection;
+  tagName.style.justifyContent = justifyContent;
+  tagName.style.alignItems = alignItems;
 }
+
+// function tagDisplayStyle(tagName, display, flexDirection, justifyContent, alignItems) {
+//   tagName.style.display = display;
+//   if (typeof(flexDirection) !== undefined) {
+//     tagName.style.flexDirection = flexDirection;
+//   };
+//   if (typeof(justifyContent) !== undefined) {
+//     tagName.style.justifyContent = justifyContent;
+//   };
+//   if (typeof(alignItems) !== undefined) {
+//     tagName.style.alignItems = alignItems;
+//   };
+// }
+

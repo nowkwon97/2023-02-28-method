@@ -18,6 +18,16 @@
     makeTag('main', 'id', 'main', root);
     makeTag('footer', 'id', 'footer', root);
 
+    // 구조의 사이즈 지정
+
+    // root 사이즈 지정
+    tagWidthHeightStyle(root, '100vw', '100vh');
+    // root 하위 구조 사이즈 지정
+    tagWidthHeightStyle(header, '100%', '10%');
+    tagWidthHeightStyle(section, '100%', '20%');
+    tagWidthHeightStyle(main, '100%', '60%');
+    tagWidthHeightStyle(footer, '100%', '10%');
+
     // id가 필요 없는 요소를 만들 때는 makeStructure 함수 사용
     makeStructure(header, 'div');
     makeStructure(header, 'div');
@@ -31,6 +41,7 @@
     makeStructure(footer, 'div');
     makeStructure(footer, 'div');
 
+    tagDisplayStyle(header, 'flex', '', 'center', '');
   </script>
 </body>
 </html>

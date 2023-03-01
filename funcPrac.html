@@ -13,10 +13,17 @@
   <script>
     
     // id를 지정해주는 태그를 만들 때는 makeTag 함수 사용
-    makeTag('header', 'id', 'header', root);
-    makeTag('section', 'id', 'section', root);
-    makeTag('main', 'id', 'main', root);
-    makeTag('footer', 'id', 'footer', root);
+    // makeTag('header', 'id', 'header', root);
+    // makeTag('section', 'id', 'section', root);
+    // makeTag('main', 'id', 'main', root);
+    // makeTag('footer', 'id', 'footer', root);
+    
+    makeTag('header', root, 'id', 'header');
+    makeTag('section', root, 'id', 'section');
+    makeTag('main', root, 'id', 'main');
+    // setAttribute를 설정 안 할 경우 쓰지 않는다.
+    makeTag('footer', root);
+    makeTag('nav', header);
 
     // 구조의 사이즈 지정
 

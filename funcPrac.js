@@ -1,9 +1,18 @@
+
+// function makeTag(tagName, setAttributeName, setAttributeValue, parent) {
+//   const element = document.createElement(tagName);
+//   element.setAttribute(setAttributeName, setAttributeValue);
+//   parent.appendChild(element);
+// };
+
 // tag 요소의 속성 값을 설정해주는 함수
-function makeTag(tagName, setAttributeName, setAttributeValue, parent) {
+// attribute를 지정 안해줄경우 tagName, parent만 입력해준다.
+function makeTag(tagName, parent, setAttributeName, setAttributeValue) {
   const element = document.createElement(tagName);
-  element.setAttribute(setAttributeName, setAttributeValue);
   parent.appendChild(element);
-  
+  if (setAttributeName !== undefined) {
+    element.setAttribute(setAttributeName, setAttributeValue);
+  }
 };
 
 // id 가 없는 구조를 생성하는 함수

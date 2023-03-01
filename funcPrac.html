@@ -12,10 +12,25 @@
   <script src="./funcPrac.js"></script>
   <script>
     
-    for (let i = 0; i < 50; i++) {
-      makeTag('div', 'id', `items-${i}`, root);
-    }
-    
+    // id를 지정해주는 태그를 만들 때는 makeTag 함수 사용
+    makeTag('header', 'id', 'header', root);
+    makeTag('section', 'id', 'section', root);
+    makeTag('main', 'id', 'main', root);
+    makeTag('footer', 'id', 'footer', root);
+
+    // id가 필요 없는 요소를 만들 때는 makeStructure 함수 사용
+    makeStructure(header, 'div');
+    makeStructure(header, 'div');
+
+    makeStructure(section, 'div');
+    makeStructure(section, 'div');
+
+    makeStructure(main, 'div');
+    makeStructure(main, 'div');
+
+    makeStructure(footer, 'div');
+    makeStructure(footer, 'div');
+
   </script>
 </body>
 </html>
